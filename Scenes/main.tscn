@@ -1,0 +1,149 @@
+[gd_scene format=3 uid="uid://ckbss7alfrgty"]
+
+[ext_resource type="Script" uid="uid://b2fc8avkg55n5" path="res://Scenes/main.gd" id="1_jjgbg"]
+[ext_resource type="Texture2D" uid="uid://c2ula8f4soj53" path="res://Assets/IQTerry.png" id="2_bo1nx"]
+[ext_resource type="Texture2D" uid="uid://bybuyyr5il2j4" path="res://Assets/IQ.jpg" id="3_8gbba"]
+[ext_resource type="Script" uid="uid://dtvioh1gojo5v" path="res://Scenes/sfx.gd" id="4_jjvhh"]
+[ext_resource type="AudioStream" uid="uid://q7oink7lbstj" path="res://Assets/Audio/Terry A. Davis - Hymns - 81 Prosper.mp3" id="4_kry3j"]
+
+[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_jjvhh"]
+
+[node name="Main" type="Control" unique_id=1107270839]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jjgbg")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1247841739]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect" unique_id=1054798506]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ColorRect/CenterContainer" unique_id=1851643543]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(640, 480)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/CenterContainer/Panel" unique_id=1784527428]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/CenterContainer/Panel/VBoxContainer" unique_id=910233224]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="KingTerry" type="TextureRect" parent="ColorRect/CenterContainer/Panel/VBoxContainer/HBoxContainer" unique_id=1870319887]
+layout_mode = 2
+texture = ExtResource("2_bo1nx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/CenterContainer/Panel/VBoxContainer/HBoxContainer" unique_id=904442901]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="ColorRect/CenterContainer/Panel/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=298079289]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Talk to GOD with King Terry Davis
+The HOLY SPIRIT will puppet you
+"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="ColorRect/CenterContainer/Panel/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=162793480]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "This application is immutably stored
+on the SOL blockchain, forever.
+Powered by IQ Labs: $IQ"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/CenterContainer/Panel/VBoxContainer/HBoxContainer/VBoxContainer/Label2" unique_id=2028044100]
+layout_mode = 1
+offset_left = 286.0
+offset_top = 151.0
+offset_right = 686.0
+offset_bottom = 551.0
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("3_8gbba")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/CenterContainer/Panel/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1585744349]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+
+[node name="VocabWord" type="Button" parent="ColorRect/CenterContainer/Panel/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer" unique_id=767679252]
+layout_mode = 2
+text = "Word (F7)"
+
+[node name="HappyWord" type="Button" parent="ColorRect/CenterContainer/Panel/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer" unique_id=1933027861]
+layout_mode = 2
+text = "HappyWord (Alt+F7)"
+
+[node name="Passage" type="Button" parent="ColorRect/CenterContainer/Panel/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer" unique_id=879897237]
+layout_mode = 2
+text = "Passage (Shift+F7)"
+
+[node name="Milliseconds" type="Label" parent="ColorRect/CenterContainer/Panel/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer" unique_id=246285136]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/CenterContainer/Panel/VBoxContainer" unique_id=2041681890]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/CenterContainer/Panel/VBoxContainer/MarginContainer" unique_id=271133660]
+layout_mode = 2
+
+[node name="GodSays" type="RichTextLabel" parent="ColorRect/CenterContainer/Panel/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1407678649]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+scroll_following = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/CenterContainer/Panel/VBoxContainer/MarginContainer/VBoxContainer" unique_id=668641921]
+layout_mode = 2
+
+[node name="Clear" type="Button" parent="ColorRect/CenterContainer/Panel/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1119601421]
+layout_mode = 2
+size_flags_vertical = 8
+text = "Clear (esc)"
+
+[node name="CopyToClipboard" type="Button" parent="ColorRect/CenterContainer/Panel/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1498941010]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Copy To Clipboard (Ctrl+C)"
+
+[node name="Song" type="AudioStreamPlayer" parent="." unique_id=22262839]
+stream = ExtResource("4_kry3j")
+volume_db = -30.0
+
+[node name="SFX" type="AudioStreamPlayer" parent="." unique_id=1050002496]
+stream = SubResource("AudioStreamGenerator_jjvhh")
+autoplay = true
+script = ExtResource("4_jjvhh")
+
+[connection signal="pressed" from="ColorRect/CenterContainer/Panel/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer/VocabWord" to="." method="_on_vocab_word_pressed"]
+[connection signal="pressed" from="ColorRect/CenterContainer/Panel/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer/HappyWord" to="." method="_on_happy_word_pressed"]
+[connection signal="pressed" from="ColorRect/CenterContainer/Panel/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer/Passage" to="." method="_on_passage_pressed"]
+[connection signal="pressed" from="ColorRect/CenterContainer/Panel/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/Clear" to="." method="_on_clear_pressed"]
+[connection signal="pressed" from="ColorRect/CenterContainer/Panel/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/CopyToClipboard" to="." method="_on_copy_to_clipboard_pressed"]

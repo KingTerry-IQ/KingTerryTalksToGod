@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://q7oink7lbstj"
+path="res://.godot/imported/Terry A. Davis - Hymns - 81 Prosper.mp3-1b6d7af0cbfc21bcf54d496cc69e3b9b.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Terry A. Davis - Hymns - 81 Prosper.mp3"
+dest_files=["res://.godot/imported/Terry A. Davis - Hymns - 81 Prosper.mp3-1b6d7af0cbfc21bcf54d496cc69e3b9b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

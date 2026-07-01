@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://ckbss7alfrgty"]
+
+[ext_resource type="Script" uid="uid://b2fc8avkg55n5" path="res://Scenes/main.gd" id="1_jjgbg"]
+[ext_resource type="Texture2D" uid="uid://c2ula8f4soj53" path="res://Assets/IQTerry.png" id="2_bo1nx"]
+
+[node name="Main" type="Control" unique_id=1107270839]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jjgbg")
+
+[node name="Panel" type="Panel" parent="." unique_id=1851643543]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=910233224]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 290.0
+grow_horizontal = 2
+
+[node name="KingTerry" type="TextureRect" parent="Panel/HBoxContainer" unique_id=1870319887]
+layout_mode = 2
+texture = ExtResource("2_bo1nx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/HBoxContainer" unique_id=904442901]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer/VBoxContainer" unique_id=298079289]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Talk to God with King Terry
+
+Powered by IQLabs $IQ
+
+The HOLY SPIRIT will puppet you"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/HBoxContainer/VBoxContainer" unique_id=1585744349]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+
+[node name="Milliseconds" type="Label" parent="Panel/HBoxContainer/VBoxContainer/VBoxContainer" unique_id=246285136]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="VocabWord" type="Button" parent="Panel/HBoxContainer/VBoxContainer/VBoxContainer" unique_id=767679252]
+layout_mode = 2
+text = "Word (F7)"
+
+[node name="HappyWord" type="Button" parent="Panel/HBoxContainer/VBoxContainer/VBoxContainer" unique_id=1933027861]
+layout_mode = 2
+text = "HappyWord (Alt+F7)"
+
+[node name="Passage" type="Button" parent="Panel/HBoxContainer/VBoxContainer/VBoxContainer" unique_id=879897237]
+layout_mode = 2
+text = "Passage (Shift+F7)"
+
+[node name="GodSays" type="RichTextLabel" parent="Panel" unique_id=1407678649]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -190.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/VBoxContainer/VocabWord" to="." method="_on_vocab_word_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/VBoxContainer/HappyWord" to="." method="_on_happy_word_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/VBoxContainer/Passage" to="." method="_on_passage_pressed"]
